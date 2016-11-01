@@ -7,11 +7,11 @@ int main(int argc, char *argv[])
     Fraction *frac1 = [[Fraction alloc] init];
     Fraction *frac2 = [[Fraction alloc] init];
 
-    [frac1 setNumerator: 1];
-    [frac1 setDenominator: 3];
+    frac1.numerator = 1;
+    frac1.denominator = 3;
 
-    [frac2 setNumerator: 3];
-    [frac2 setDenominator: 7];
+    frac2.numerator = 1;
+    frac2.denominator = 3;
 
     NSLog(@"The first frac1 is:");
     [frac1 print];
@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
     [frac2 print];
     NSLog(@"%f", [frac2 convertToNum]);
 
-    NSLog(@"The numerator of frac2 is: %i", [frac2 numerator]);
-    NSLog(@"The denominator of frac2 is: %i", [frac2 denominator]);
+    NSLog(@"The numerator of frac2 is: %i", frac2.numerator);
+    NSLog(@"The denominator of frac2 is: %i", frac2.denominator);
 
 
     [frac1 release];
