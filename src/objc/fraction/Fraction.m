@@ -12,6 +12,8 @@
 - (void) print;
 - (void) setNumerator: (int) n;
 - (void) setDenominator: (int) d;
+- (int) numerator;
+- (int) denominator;
 @end
 
 // @implementation section
@@ -31,6 +33,16 @@
 {
     denominator = d;
 }
+
+- (int) numerator
+{
+    return numerator;
+}
+
+- (int) denominator
+{
+    return denominator;
+}
 @end
 
 // program section
@@ -47,11 +59,14 @@ int main(int argc, char *argv[])
     [frac2 setNumerator: 3];
     [frac2 setDenominator: 7];
 
-    NSLog(@"The first of frac1 is:");
+    NSLog(@"The first frac1 is:");
     [frac1 print];
 
-    NSLog(@"The second of frac2 is:");
+    NSLog(@"The second frac2 is:");
     [frac2 print];
+
+    NSLog(@"The numerator of frac2 is: %i", [frac2 numerator]);
+    NSLog(@"The denominator of frac2 is: %i", [frac2 denominator]);
 
     [frac1 release];
     [frac2 release];
