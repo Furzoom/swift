@@ -8,4 +8,6 @@
 
 - (void) print;
 - (double) convertToNum;
+- (void) setTo: (int) n over: (int) d;
+
 @end

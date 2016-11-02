@@ -18,4 +18,11 @@
     else
         return 1.0;
 }
+
+- (void) setTo: (int) n over: (int) d
+{
+    numerator = n;
+    denominator = d;
+}
+
 @end

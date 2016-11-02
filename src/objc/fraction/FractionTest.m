@@ -10,8 +10,8 @@ int main(int argc, char *argv[])
     frac1.numerator = 1;
     frac1.denominator = 3;
 
-    frac2.numerator = 1;
-    frac2.denominator = 3;
+    frac2.numerator = 2;
+    frac2.denominator = 7;
 
     NSLog(@"The first frac1 is:");
     [frac1 print];
@@ -24,6 +24,9 @@ int main(int argc, char *argv[])
     NSLog(@"The numerator of frac2 is: %i", frac2.numerator);
     NSLog(@"The denominator of frac2 is: %i", frac2.denominator);
 
+    [frac2 setTo: 5 over: 6];
+    NSLog(@"After setTo, frac2 is:");
+    [frac2 print];
 
     [frac1 release];
     [frac2 release];
