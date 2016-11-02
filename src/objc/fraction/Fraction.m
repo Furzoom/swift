@@ -25,11 +25,18 @@
     denominator = d;
 }
 
-- (void) add: (Fraction *) f
+- (Fraction *) add: (Fraction *) f
 {
-    numerator = numerator * f.denominator + denominator * f.numerator;
-    denominator = denominator * f.denominator;
-    [self reduce];
+    Fraction *result = [[Fraction alloc] init];
+    int resultNum;
+    int resultDenom;
+
+    resultNum = numerator * f.denominator + denominator * f.numerator;
+    resultDenom = denominator * f.denominator;
+
+    [result setTo: resultNum over: resultDenom];
+    [result reduce];
+    return result;
 }
 
 - (void) reduce

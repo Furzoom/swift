@@ -6,6 +6,7 @@ int main(int argc, char *argv[])
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     Fraction *frac1 = [[Fraction alloc] init];
     Fraction *frac2 = [[Fraction alloc] init];
+    Fraction *result;
 
     frac1.numerator = 1;
     frac1.denominator = 3;
@@ -32,11 +33,12 @@ int main(int argc, char *argv[])
     NSLog(@"+");
     [frac1 print];
     NSLog(@"=");
-    [frac2 add: frac1];
-    [frac2 print];
+    result = [frac2 add: frac1];
+    [result print];
 
     [frac1 release];
     [frac2 release];
+    [result release];
 
     [pool drain];
     return 0;
