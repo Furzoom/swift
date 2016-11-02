@@ -35,6 +35,10 @@ int main(int argc, char *argv[])
     [frac2 add: frac1];
     [frac2 print];
 
+    NSLog(@"reduce");
+    [frac2 reduce];
+    [frac2 print];
+
     [frac1 release];
     [frac2 release];
 
