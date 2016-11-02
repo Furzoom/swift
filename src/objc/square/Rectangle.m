@@ -1,7 +1,18 @@
-#import "rectangle.h"
+#import "Rectangle.h"
+#import "XYPoint.h"
 
 @implementation Rectangle
 @synthesize width, height;
+
+-(XYPoint *) origin
+{
+    return origin;
+}
+
+-(void) setOrigin: (XYPoint *) pt
+{
+    origin = pt;
+}
 
 -(void) setWidth: (int) w andHeight: (int) h
 {
