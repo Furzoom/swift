@@ -28,6 +28,13 @@ int main(int argc, char *argv[])
     NSLog(@"After setTo, frac2 is:");
     [frac2 print];
 
+    [frac2 print];
+    NSLog(@"+");
+    [frac1 print];
+    NSLog(@"=");
+    [frac2 add: frac1];
+    [frac2 print];
+
     [frac1 release];
     [frac2 release];
 
