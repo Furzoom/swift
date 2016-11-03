@@ -25,7 +25,12 @@
 
 // classB
 @interface ClassB: ClassA
+{
+    int y;
+}
+
 -(void) initVar;
+-(void) printVar;
 @end
 
 @implementation ClassB
@@ -33,6 +38,13 @@
 -(void) initVar
 {
     x = 200;
+    y = 300;
+}
+
+-(void) printVar
+{
+    [super printVar];
+    NSLog(@"y = %i", y);
 }
 
 @end
