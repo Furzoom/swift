@@ -11,7 +11,8 @@
 
 -(void) setOrigin: (XYPoint *) pt
 {
-    origin = pt;
+    origin = [[XYPoint alloc] init];
+    [origin setX: pt.x andY: pt.y];
 }
 
 -(void) setWidth: (int) w andHeight: (int) h

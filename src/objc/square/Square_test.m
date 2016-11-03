@@ -22,6 +22,10 @@ int main(int argc, char *argv[])
     NSLog(@"Origin at (%i, %i)", myRect.origin.x, myRect.origin.y);
     NSLog(@"Area = %i, Perimeter = %i", [myRect area], [myRect perimeter]);
 
+    [myPoint setX: 50 andY: 50];
+    NSLog(@"Origin at (%i, %i)", myRect.origin.x, myRect.origin.y);
+
+    [[myRect origin] release];
 	[mySquare release];
     [myRect release];
     [myPoint release];
