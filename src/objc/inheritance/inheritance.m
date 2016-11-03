@@ -15,9 +15,11 @@
 }
 @end
 
+
 // classB
 @interface ClassB: ClassA
 -(void) printVar;
+-(void) initVar;
 @end
 
 @implementation ClassB
@@ -25,6 +27,12 @@
 {
     NSLog(@"x = %i", x);
 }
+
+-(void) initVar
+{
+    x = 200;
+}
+
 @end
 
 int main(int argc, char *argv[])
