@@ -1,3 +1,5 @@
+#include <Foundation/Foundation.h>
+
 @interface Fraction: NSObject
 {
     int numerator;
