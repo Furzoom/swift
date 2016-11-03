@@ -25,15 +25,10 @@
 
 // classB
 @interface ClassB: ClassA
--(void) printVar;
 -(void) initVar;
 @end
 
 @implementation ClassB
--(void) printVar
-{
-    NSLog(@"x = %i", x);
-}
 
 -(void) initVar
 {
