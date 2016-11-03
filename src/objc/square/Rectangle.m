@@ -11,6 +11,9 @@
 
 -(void) setOrigin: (XYPoint *) pt
 {
+    if (origin)
+        [origin release];
+
     origin = [[XYPoint alloc] init];
     [origin setX: pt.x andY: pt.y];
 }
@@ -29,5 +32,11 @@
 -(int) perimeter
 {
     return (width + height) * 2;
+}
+
+-(void) dealloc
+{
+    [origin release];
+    [super dealloc];
 }
 @end

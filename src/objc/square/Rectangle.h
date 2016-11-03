@@ -14,5 +14,6 @@
 -(int) area;
 -(int) perimeter;
 -(void) setWidth: (int) w andHeight: (int) h;
+-(void) dealloc;
 @end
 

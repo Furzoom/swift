@@ -25,7 +25,9 @@ int main(int argc, char *argv[])
     [myPoint setX: 50 andY: 50];
     NSLog(@"Origin at (%i, %i)", myRect.origin.x, myRect.origin.y);
 
-    [[myRect origin] release];
+    myRect.origin = myPoint;
+    NSLog(@"Origin at (%i, %i)", myRect.origin.x, myRect.origin.y);
+
 	[mySquare release];
     [myRect release];
     [myPoint release];
