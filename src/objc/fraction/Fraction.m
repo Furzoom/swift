@@ -6,6 +6,19 @@
 
 @synthesize numerator, denominator;
 
+- (Fraction *) init
+{
+    return [self initWith: 0: 0];
+}
+
+- (Fraction *) initWith: (int) n: (int) d
+{
+    self = [super init];
+    if (self)
+        [self setTo: n over: d];
+    return self;
+}
+
 - (void) print
 {
     NSLog(@"%i/%i", numerator, denominator);

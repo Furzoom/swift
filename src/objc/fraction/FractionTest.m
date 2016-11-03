@@ -36,8 +36,12 @@ int main(int argc, char *argv[])
     result = [frac2 add: frac1];
     [result print];
 
+    Fraction *f3 = [[Fraction alloc] initWith: 7: 9];
+    [f3 print];
+
     [frac1 release];
     [frac2 release];
+    [f3 release];
     [result release];
 
     [pool drain];
