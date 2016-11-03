@@ -6,6 +6,7 @@
     int x;
 }
 -(void) initVar;
+-(void) printVar;
 @end
 
 @implementation ClassA
@@ -13,6 +14,12 @@
 {
     x = 100;
 }
+
+-(void) printVar
+{
+    NSLog(@"x = %i", x);
+}
+
 @end
 
 
@@ -38,10 +45,19 @@
 int main(int argc, char *argv[])
 {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
+    ClassA *a = [[ClassA alloc] init];
     ClassB *b = [[ClassB alloc] init];
+
+    [a initVar];
+    [a printVar];
+
     [b initVar];
     [b printVar];
+
+    [a release];
     [b release];
+
     [pool drain];
     return 0;
 }
