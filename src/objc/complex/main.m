@@ -17,18 +17,10 @@ int main(int argc, char *argv[])
     [dataValue print];
     dataValue = c1;
     [dataValue print];
-    
-/*
-    [c1 print];
-    NSLog(@"+");
-    NSLog(@"---------");
-    [compResult print];
+    NSLog(@"%i", sizeof(*c1));   
 
-    [f1 print];
-    NSLog(@"+");
-    NSLog(@"---------");
-    [fracResult print];
-*/
+    NSLog(@"f1 isMemberOfClass Fraction ? %i", [f1 isMemberOfClass: [Fraction class]]);
+    NSLog(@"f1 isKindOfClass Fraction ? %i", [f1 isKindOfClass: [Fraction class]]);
     [f1 release];
     [c1 release];
     [pool drain];
