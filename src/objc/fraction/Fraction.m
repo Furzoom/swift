@@ -6,11 +6,6 @@
 
 @synthesize numerator, denominator;
 
-- (Fraction *) init
-{
-    return [self initWith: 0: 0];
-}
-
 - (Fraction *) initWith: (int) n: (int) d
 {
     self = [super init];

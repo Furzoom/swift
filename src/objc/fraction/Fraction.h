@@ -8,7 +8,6 @@
 
 @property int numerator, denominator;
 
-- (Fraction *) init;
 - (Fraction *) initWith: (int) n: (int) d;
 - (void) print;
 - (double) convertToNum;
