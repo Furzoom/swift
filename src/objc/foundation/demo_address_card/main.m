@@ -53,7 +53,11 @@ int main(int argc, char *argv[])
         NSLog(@"Not found!");
     }
     
+    [book removeCard: card2];
+    [book list];
 
+    [book sort];
+    [book list];
 
     [card1 release];
     [card2 release];

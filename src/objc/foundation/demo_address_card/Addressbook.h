@@ -13,6 +13,8 @@
 - (void) list;
 - (void) dealloc;
 - (AddressCard *) lookup: (NSString *) theName;
+- (void) removeCard: (AddressCard *) theCard;
+- (void) sort;
 
 @end
 

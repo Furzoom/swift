@@ -54,4 +54,13 @@
     return nil;
 }
 
+- (void) removeCard: (AddressCard *) theCard
+{
+    [book removeObjectIdenticalTo: theCard];
+}
+
+- (void) sort
+{
+    [book sortUsingSelector: @selector(compareNames:)];
+}
 @end
