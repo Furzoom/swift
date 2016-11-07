@@ -22,6 +22,23 @@ int main(int argc, char *argv[])
     NSLog(@"adopt: %@", [glossary objectForKey: @"adopt"]);
     NSLog(@"archiving: %@", [glossary objectForKey: @"archiving"]);
 
+    NSMutableDictionary *dict = 
+        [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        @"value1",
+        @"key1",
+        @"value2",
+        @"key2",
+        @"value3",
+        @"key3",
+        nil
+    ];
+
+    for (NSString *key in dict)
+    {
+        NSLog(@"%@:%@", key, [dict objectForKey: key]);
+    }
+
+
     [pool drain];
     return 0;
 }
