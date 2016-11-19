@@ -2,6 +2,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 #import <Foundation/NSAutoreleasePool.h>
+#import <Foundation/NSError.h>
 
 int main(int argc, char *argv[])
 {
@@ -168,7 +169,20 @@ int main(int argc, char *argv[])
     str1 = search;
     str1 = replace;
 
+    NSError *error = nil;
+    NSString *string = [[NSString alloc] initWithContentsOfFile: @"makefile1"
+                        encoding: NSUTF8StringEncoding
+                        error: &error];
+    if (nil != error) {
+        NSLog(@"Unable to read data from file, %@", 
+                [error localizedDescription]);
+        return 1;
+    }
 
+    NSLog(@"%@", string);
+
+    [string release];
     [pool drain];
     return 0;
+
 }
